@@ -18,9 +18,7 @@ public class Accessory {
 	private String name;
 	private Double price;
 	private String description;
-	
-	
-	// Many To One Relationship
+
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="car_id")
 	private Car car;
@@ -29,8 +27,6 @@ public class Accessory {
 
 	}
 
-	
-	//getters and setters
 	public Long getId() {
 		return id;
 	}
@@ -70,4 +66,4 @@ public class Accessory {
 	public void setCar(Car car) {
 		this.car = car;
 	}
-}//end of Accessory
+}

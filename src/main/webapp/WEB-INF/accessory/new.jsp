@@ -14,34 +14,31 @@
 	<nav>
 		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
 	</nav>
-<div class="container">
-<h2>Add Car Accessory</h2>
-<form:form method="POST" action="/accessory" modelAttribute="accessory">
-	<div class="form-group">
-		<form:label path="name">Name
-		<form:errors path="name"/>
-		<form:input path="name"/></form:label>
+	<div class="container">
+		<h2>Add Car Accessory</h2>
+		<form:form method="POST" action="/accessory" modelAttribute="accessory">
+			<div class="form-group">
+				<form:label path="name">Name
+				<form:errors path="name"/>
+				<form:input path="name"/></form:label>
+			</div>
+			<div class="form-group">
+				<form:label path="price">Price
+				<form:errors path="price"/>
+				<form:input path="price"/></form:label>
+			</div>
+			<div class="form-group"> Description
+				<form:label path="description">
+				<form:errors path="description"/>
+				<form:input path="description"/></form:label>
+			</div>
+			<form:select path="car">
+				<c:forEach items="${cars}" var="car">
+					<option value="${car.id}">${car.make} ${car.model}</option>	
+				</c:forEach>
+			</form:select>
+			<button class="btn btn-primary">Add Accessory</button>
+		</form:form>
 	</div>
-		<div class="form-group">
-		<form:label path="price">Price
-		<form:errors path="price"/>
-		<form:input path="price"/></form:label>
-	</div>
-		<div class="form-group"> Description
-		<form:label path="description">
-		<form:errors path="description"/>
-		<form:input path="description"/></form:label>
-	</div>
-	<form:select path="car">
-	<c:forEach items="${cars}" var="car">
-	<option value="${car.id}">${car.make} ${car.model}</option>	
-	</c:forEach>
-	</form:select>
-
-<button class="btn btn-primary">Add Accessory</button>
-</form:form>
-
-</div>
 </body>
-
 </html>

@@ -15,8 +15,3 @@ public interface UserRepository extends CrudRepository<User, Long> {
     List<User> findAll();
     List<User> findUserById(Long id);
 }
-//Get these free with CrudRepository
-//C - Create
-//R - Read
-//U - Update
-//D - Delete

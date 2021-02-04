@@ -1,8 +1,6 @@
 package com.cd.dtstanley.carsgroup.models;
 
 import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -34,20 +32,15 @@ public class User {
     @NotBlank
     private String email;
  
-
-    // NEW
     @NotBlank
     @Size(min=5, message="Password must be greater than 5 characters")
     private String password;
     @Transient
     private String passwordConfirmation;
     
-    //Relationship OneToMany with rating
     @OneToMany(mappedBy="user", fetch=FetchType.LAZY)
 	private List<Rating> ratings;
 
-    
-    //getters and setters
     public Long getId() {
 		return id;
 	}
@@ -85,10 +78,7 @@ public class User {
 		this.passwordConfirmation = passwordConfirmation;
 	}
 	
-	
-	//constructors
 	public User() {
     }
-	
-    
-}// end of User
+	   
+}

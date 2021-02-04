@@ -18,7 +18,6 @@ import com.cd.dtstanley.carsgroup.validators.UserValidator;
 
 
 @Controller
-//@RequestMapping("/dashboard")
 public class AuthenticationController {
 @Autowired
 private UserService userSvc;
@@ -53,14 +52,11 @@ public String login(HttpSession session, @RequestParam("myemail")String email, @
 public String registering(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
 	userVal.validate(user, result);
 	if(result.hasErrors()) {
-		//If there are validation errors:
-		//We want to return the user directly to the registration page
 		return "/dashboard/landing.jsp";
 	}
 	User newUser = this.userSvc.registerUser(user);
 	session.setAttribute("user_id", newUser.getId());
 	
-//	return "redirect:/index.jsp";
 	return "/dashboard/indexHome.jsp";
 }
 
@@ -73,4 +69,4 @@ public String logingout(HttpSession session) {
 }
 
 	
-}// end of AuthenticationController
+}

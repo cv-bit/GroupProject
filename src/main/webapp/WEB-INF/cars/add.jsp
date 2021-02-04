@@ -13,45 +13,42 @@
 	<nav>
 		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
 	</nav>
-<div class="container">
-<h1>Add New Car</h1>
+	<div class="container">
+		<h1>Add New Car</h1>
 
-<c:forEach items="${errors}" var="err">
-<p>${err}</p>
-</c:forEach>
-
-<hr>
-<form:form method="POST" action="/cars/add" modelAttribute="car">
-<div class="form-group">
-	<form:label path="make">Make:
-	<form:errors path="make"/>
-	<form:input path="make"/></form:label>
-</div>
-<div class="form-group">
-	<form:label path="model">Model:
-	<form:errors path="model"/>
-	<form:input path="model"/></form:label>
-</div>
-<div class="form-group">
-	<form:label path="color">Color:
-	<form:errors path="color"/>
-	<form:input path="color"/></form:label>
-</div>
-<div class="form-group">
-	<form:label path="year">Year:
-	<form:errors path="year"/>
-	<form:input path="year"/></form:label>
-</div>
-<div class="form-group">
-	<form:label path="transmission">Transmission:
-	<form:errors path="transmission"/>
-	<form:input path="transmission"/></form:label>
-</div>
-<button class="btn btn-dark">Create New Car</button>
-
-</form:form>
-<hr>
-
-</div>
+		<c:forEach items="${errors}" var="err">
+			<p>${err}</p>
+		</c:forEach>
+		<hr>
+	<form:form method="POST" action="/cars/add" modelAttribute="car">			
+		<div class="form-group">
+			<form:label path="make">Make:
+			<form:errors path="make"/>
+			<form:input path="make"/></form:label>
+		</div>
+		<div class="form-group">
+			<form:label path="model">Model:
+			<form:errors path="model"/>
+			<form:input path="model"/></form:label>
+		</div>
+		<div class="form-group">
+			<form:label path="color">Color:
+			<form:errors path="color"/>
+			<form:input path="color"/></form:label>
+		</div>
+		<div class="form-group">
+			<form:label path="year">Year:
+			<form:errors path="year"/>
+			<form:input path="year"/></form:label>
+		</div>
+		<div class="form-group">
+			<form:label path="transmission">Transmission:
+			<form:errors path="transmission"/>
+			<form:input path="transmission"/></form:label>
+		</div>
+		<button class="btn btn-dark">Create New Car</button>
+	</form:form>
+	<hr>
+	</div>
 </body>
 </html>
