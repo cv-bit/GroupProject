@@ -7,12 +7,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Landing Page</title>
-<link rel="stylesheet" type = "text/css" href = "css/style.css">
+<link rel="stylesheet" type = "text/css" href = "css/landing.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body id="body">
 	<div class ="container">
-		<h1>Cars</h1>
+			<iframe width="95%" height="250rem" class="video"
+				src="https://www.youtube.com/embed/ogQZE4yXBcY?autoplay=1&mute=1&playlist=ogQZE4yXBcY&loop=1">
+			</iframe>
+			<div class="header">
+				<h1>My Car</h1>
+			</div>
 		<div class= "row">
 		<div class = "col">
 

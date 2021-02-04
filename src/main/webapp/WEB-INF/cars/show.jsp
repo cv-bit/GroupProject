@@ -8,10 +8,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Car Details</title>
+<link rel="stylesheet" type = "text/css" href = "/css/show.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" type = "text/css" href = "css/style.css">
 </head>
-<body>
+<body id="body">
 	<nav>
 		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
 	</nav>
@@ -51,7 +51,7 @@
 						<option value="9">9</option>
 						<option value="10">10</option>
 					</select>
-					<input type="submit" value="Rate!" class="btn btn-secondary"/>
+					<input type="submit" value="Rate!" class="btn btn-danger"/>
 				</div>
 			</form>
 		</c:if>
@@ -112,7 +112,7 @@
 				<form:input path="state"/></form:label>
 			</div>
 		<form:input type="hidden" value="${car.id}" path="car"/>
-			<button class="btn btn-primary">Register This Vehicle!</button>
+			<button class="btn btn-danger">Register This Vehicle!</button>
 		</form:form>
 	</c:otherwise>
 	</c:choose>
@@ -145,7 +145,7 @@
 				<form:errors path="transmission"/>
 				<form:input path="transmission"/></form:label>
 			</div>
-			<button class="btn btn-dark">Save Changes</button>
+			<button class="btn btn-danger">Save Changes</button>
 		</form:form>	
 			<a href="/cars/delete/${car.id}" class="btn btn-danger">Delete This Car</a>
 	</div>

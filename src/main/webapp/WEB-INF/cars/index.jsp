@@ -8,10 +8,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Index Page</title>
-<link rel="stylesheet" type = "text/css" href = "css/style.css">
+<link rel="stylesheet" type = "text/css" href = "css/index.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body id="body">
 	<nav>
 		Return to --><a href="/">Login Page</a>
 	</nav>
@@ -20,7 +20,7 @@
 		<h1>Welcome to Cars dot Com</h1>
 		<hr>
 		Welcome ${user.firstName}
-		<a href="/cars/add" class="btn btn-primary">Add New Car</a><a href="/accessory/new" class="btn btn-primary">Add New Accessory</a>
+		<a href="/cars/add" class="btn btn-danger">Add New Car</a> <a href="/accessory/new" class="btn btn-danger">Add New Accessory</a>
 		<hr>
 		<h3>Showing All Cars</h3>
 		<table class="table table-dark">

@@ -7,9 +7,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add New Car</title>
+<link rel="stylesheet" type = "text/css" href = "/css/add.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body id="body">
 	<nav>
 		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
 	</nav>
@@ -46,7 +47,7 @@
 			<form:errors path="transmission"/>
 			<form:input path="transmission"/></form:label>
 		</div>
-		<button class="btn btn-dark">Create New Car</button>
+		<button class="btn btn-danger">Create New Car</button>
 	</form:form>
 	<hr>
 	</div>
