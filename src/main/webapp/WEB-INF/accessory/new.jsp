@@ -7,10 +7,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Accessory</title>
+<link rel="stylesheet" type = "text/css" href = "/css/new.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 </head>
-<body>
+<body id="body">
 	<nav>
 		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
 	</nav>
@@ -37,7 +37,7 @@
 					<option value="${car.id}">${car.make} ${car.model}</option>	
 				</c:forEach>
 			</form:select>
-			<button class="btn btn-primary">Add Accessory</button>
+			<button class="btn btn-danger">Add Accessory</button>
 		</form:form>
 	</div>
 </body>
