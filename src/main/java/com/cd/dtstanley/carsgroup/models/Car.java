@@ -43,11 +43,9 @@ public class Car {
 	@NotBlank 
 	private String transmission;
 	
-	//Relationship One To One
 	@OneToOne(mappedBy="car", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Title title;
-	
-	//Relationship One to Many
+
 	@OneToMany(mappedBy="car", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private List<Accessory> accessories;
 	
@@ -58,13 +56,11 @@ public class Car {
 			inverseJoinColumns = @JoinColumn(name="user_id")
 			)
 	private List<User> likers;
-	
-	//Relationship Many-To-One with Car
+
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id")
 	private User owner;
-	
-	//Relationship OneToMany with Rating
+
 	@OneToMany(mappedBy="car", fetch=FetchType.LAZY)
 	private List<Rating> ratings;
 	
@@ -99,7 +95,6 @@ public class Car {
 		this.transmission = transmission;
 	}
 
-	//getters and setters
 	public Long getId() {
 		return id;
 	}

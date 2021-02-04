@@ -11,10 +11,4 @@ import com.cd.dtstanley.carsgroup.models.Rating;
 @Repository
 public interface RatingRepository extends CrudRepository<Rating, Long>{
 	List<Rating> findAll();
-	// SELECT * FROM rating
 }
-//Get these free with CrudRepository
-//C - Create
-//R - Read
-//U - Update
-//D – Delete

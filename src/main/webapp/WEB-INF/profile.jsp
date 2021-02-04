@@ -12,16 +12,16 @@
 <link rel="stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body>
-<div class="container">
-<h2>User Details for ${user.firstName} ${user.lastName}</h2>
-<hr>
-<h3>Cars Owned:</h3>
-<ul>
-<c:forEach items="${user.cars}" var="car">
-<li><a href="/cars/${car.id}" >${car.make} - ${car.model}></a></li>
+	<div class="container">
+		<h2>User Details for ${user.firstName} ${user.lastName}</h2>
+		<hr>
+		<h3>Cars Owned:</h3>
+		<ul>
+			<c:forEach items="${user.cars}" var="car">
+				<li><a href="/cars/${car.id}" >${car.make} - ${car.model}></a></li>
 
-</c:forEach>
-</ul>
-</div>
+			</c:forEach>
+		</ul>
+	</div>
 </body>
 </html>

@@ -39,9 +39,7 @@ public class CarController {
 	private UserService uService;
 	@Autowired
 	private RatingService rService;
-	
-//	@RequestMapping("/", method=RequestMethod.GET)
-//	@RequestMapping("/")
+
 	@GetMapping("")
 	public String index(Model viewModel, HttpSession session, @ModelAttribute("rating") Rating rating) {
 		if(session.getAttribute("user_id").equals(null)) {
@@ -127,7 +125,7 @@ public class CarController {
 	
 	@GetMapping("/like/{id}")
 	public String like(@PathVariable("id") Long id, HttpSession session) {
-		Long userId = (Long)session.getAttribute("user_id");	//always must typecast the session to get data
+		Long userId = (Long)session.getAttribute("user_id");	
 		Long carId = id;
 		User liker = this.uService.getSingleUser(userId);
 		Car likedCar = this.cService.getSingleCar(carId);
@@ -137,21 +135,20 @@ public class CarController {
 	
 	@GetMapping("/unlike/{id}")
 	public String unlike(@PathVariable("id") Long id, HttpSession session) {
-		Long userId = (Long)session.getAttribute("user_id");	//always must typecast the session to get data
+		Long userId = (Long)session.getAttribute("user_id");	
 		Long carId = id;
 		User liker = this.uService.getSingleUser(userId);
 		Car likedCar = this.cService.getSingleCar(carId);
-//		this.cService.removeLiker(liker, likedCar);
 		return "redirect:/cars";
 	}
 	
-	@GetMapping("user/{id}")  //path variable to identify user, need a view model in order to get the data from a database and display results,
+	@GetMapping("user/{id}") 
 	public String profile(@PathVariable("id")Long id, Model viewModel) {
 		viewModel.addAttribute("user", this.uService.getSingleUser(id));
 		return "profile.jsp";
 	}
 	
-	@PostMapping("/rate/{id}") //with HTML form (form)
+	@PostMapping("/rate/{id}") 
 	public String rateCar(@RequestParam("rating") int rating, @PathVariable("id") Long id, Model viewModel, HttpSession session) {
 		//grab car by Id
 		Car car= this.cService.getSingleCar(id);
@@ -166,5 +163,5 @@ public class CarController {
 		return "redirect:/cars/{id}";
 	}
 
-}//end of CarController
+}
 

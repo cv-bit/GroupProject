@@ -12,9 +12,3 @@ import com.cd.dtstanley.carsgroup.models.Accessory;
 public interface AccessoryRepository extends CrudRepository<Accessory, Long> {
 	List<Accessory> findAll();
 }
-//Get these free with CrudRepository
-//C - Create
-//R - Read
-//U - Update
-//D – Delete
-

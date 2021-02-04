@@ -9,8 +9,6 @@ import com.cd.dtstanley.carsgroup.repositories.RatingRepository;
 @Service
 public class RatingService {
 
-	
-	// Dependency Injection
 	@Autowired
 	private RatingRepository rRepo;
 	

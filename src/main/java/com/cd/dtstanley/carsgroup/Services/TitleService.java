@@ -10,8 +10,7 @@ import com.cd.dtstanley.carsgroup.repositories.TitleRepository;
 public class TitleService {
 	@Autowired
 	private TitleRepository tRepo;
-	
-	//Create
+
 	public Title create(Title title) {
 		return this.tRepo.save(title);
 	}

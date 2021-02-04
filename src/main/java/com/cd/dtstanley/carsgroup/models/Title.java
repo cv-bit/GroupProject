@@ -19,17 +19,13 @@ public class Title {
 	private String city;
 	private String state;
 	
-	// Relationship One to One
 	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="car_id")
 	private Car car;
-
-	//Relationship Many to One
 	
 	public Title() {
 	}
 
-	//getters and setters
 	public Long getId() {
 		return id;
 	}
