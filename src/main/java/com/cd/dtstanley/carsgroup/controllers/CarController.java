@@ -139,6 +139,7 @@ public class CarController {
 		Long carId = id;
 		User liker = this.uService.getSingleUser(userId);
 		Car likedCar = this.cService.getSingleCar(carId);
+		this.cService.removeLiker(liker, likedCar);
 		return "redirect:/cars";
 	}
 	

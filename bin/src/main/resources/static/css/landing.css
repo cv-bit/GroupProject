@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+*{
+	color:white;
+	background-color:black;
+	padding:5px;
+}
+
+#body{
+	background-color:black;
+}
+
+.video{
+	border:none;
+	margin:1rem;
+	z-index:-1;
+}

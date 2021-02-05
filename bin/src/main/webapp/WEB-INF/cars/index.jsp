@@ -26,7 +26,7 @@
 		<table class="table table-dark">
 			<thead>
 				<tr>
-					<th>ID</th>
+					<th>id</th>
 					<th>Make</th>
 					<th>Model</th>
 					<th>Color</th>
