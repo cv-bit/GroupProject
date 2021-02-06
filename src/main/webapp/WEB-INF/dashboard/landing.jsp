@@ -48,7 +48,7 @@
 					<form:errors path ="passwordConfirmation"/>
 					<form:input class = "form-control" path="passwordConfirmation" type="passwordConfirmation"/>
 				</div>
-				<input class="btn btn-warning" type="submit" value="Register!"/>
+				<input class="btn btn-danger" type="submit" value="Register!"/>
 
 			</form:form>
 		</div>
@@ -64,7 +64,7 @@
 					<label>Password:</label>
 					<input class = "form-control" type="password" name="mypassword">
 				</div>
-			<button class="btn btn-danger">Login</button>
+			<button class="btn btn-success">Login</button>
 		</form>
 	</div>
 	</div>
