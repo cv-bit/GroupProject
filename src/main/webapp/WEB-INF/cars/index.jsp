@@ -13,11 +13,11 @@
 </head>
 <body id="body">
 	<nav>
-		Return to --><a href="/">Login Page</a>
+		Return to --><a id="id" href="/">Login Page</a>
 	</nav>
-
+	<img src="/img/red.jpg" alt="picture of car" />
 	<div class="container">
-		<h1>Welcome to Cars dot Com</h1>
+		<h1>Welcome to Cars.Com</h1>
 		<hr>
 		Welcome ${user.firstName}
 		<a href="/cars/add" class="btn btn-primary">Add New Car</a> <a href="/accessory/new" class="btn btn-danger">Add New Accessory</a>
@@ -42,7 +42,7 @@
 					<tr>
 					<td>${car.id}</td>
 					<td>${car.make}</td>
-					<td><a href="/cars/${car.id}">${car.model}</a></td>
+					<td><a class="text-danger" href="/cars/${car.id}">${car.model}</a></td>
 					<td>${car.color}</td>
 					<td>${car.year}</td>
 					<td>${car.transmission}</td>
@@ -59,10 +59,10 @@
 					<td>
 						<c:choose>
 								<c:when test="${car.likers.contains(user)}">
-								<a href="/cars/unlike/${car.id}">Un-Like</a>
+								<a class="text-danger" href="/cars/unlike/${car.id}">Un-Like</a>
 							</c:when>
 							<c:otherwise>
-								<a href="/cars/like/${car.id}">Like</a>
+								<a class="text-danger" href="/cars/like/${car.id}">Like</a>
 							</c:otherwise>
 						</c:choose>
 					</td>	

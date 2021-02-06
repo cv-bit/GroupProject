@@ -7,13 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Accessory</title>
-<link rel="stylesheet" type = "text/css" href = "/css/new.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" type = "text/css" href = "/css/new.css">
 </head>
 <body id="body">
 	<nav>
-		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
+		Return to --><a class="text-danger" href="/">Login Page</a> | <a class="text-danger" href="/cars">Welcome Page</a>
 	</nav>
+	<img src="/img/mustang.jfif" alt="picture of car" />
 	<div class="container">
 		<h2>Add Car Accessory</h2>
 		<form:form method="POST" action="/accessory" modelAttribute="accessory">

@@ -62,9 +62,9 @@ public class CarController {
 		if(result.hasErrors()) {
 			return "cars/add.jsp";
 		}
-		Long userId = (Long)session.getAttribute("user_id"); //instead of having a hidden form, this and next 2 lines
+		Long userId = (Long)session.getAttribute("user_id");
 		User owner = this.uService.getSingleUser(userId);
-		car.setOwner(owner); //setting the user as the owner of this car
+		car.setOwner(owner);
 		this.cService.createCar(car);
 		return "redirect:/cars";
 		//		return "cars/index.jsp";
@@ -112,7 +112,6 @@ public class CarController {
 		return "redirect:/";
 	}
 	
-	// Process Editing Car Details
 	@PostMapping("/edit/{id}")
 	public String editCar(@Valid @ModelAttribute("car") Car car, BindingResult result, @PathVariable("id") Long id, Model viewModel, @ModelAttribute("title") Title title) {
 		Long carId = car.getId();

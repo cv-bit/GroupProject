@@ -13,12 +13,12 @@
 </head>
 <body id="body">
 	<nav>
-		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
+		Return to --><a id="a" href="/">Login Page</a> |	<a id="a" href="/cars">Welcome Page</a>
 	</nav>
 
 	<div class="container">
 		<h1>Details for ${car.model}</h1>
-		<h2>Owner: <a href="/cars/user/${car.owner.id}">${car.owner.firstName} ${car.owner.lastName}<a/></h2>
+		<h2>Owner: <a id="a" href="/cars/user/${car.owner.id}">${car.owner.firstName} ${car.owner.lastName}<a/></h2>
 		<h3>Number of Likes: ${car.likers.size()}</h3>
 		<h3>Liked By:</h3>
 		<ol>

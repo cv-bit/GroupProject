@@ -12,8 +12,9 @@
 </head>
 <body id="body">
 	<nav>
-		Return to --><a href="/">Login Page</a> |	<a href="/cars">Welcome Page</a>
+		Return to --><a id="a" href="/">Login Page</a> |	<a id="a" href="/cars">Welcome Page</a>
 	</nav>
+	<img src="/img/side.jfif" alt="picture of car" />
 	<div class="container">
 		<h1>Add New Car</h1>
 
