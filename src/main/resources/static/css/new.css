@@ -1,5 +1,9 @@
 @charset "ISO-8859-1";
 
+#id{
+	color:red;
+}
+
 *{
 	background-color:black;
 	color:white;
@@ -7,4 +11,10 @@
 
 #body{
 	background-color:black;
+}
+
+img{
+	width:50%;
+	height:80%;
+	float:right;
 }

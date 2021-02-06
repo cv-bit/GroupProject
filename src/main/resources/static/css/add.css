@@ -5,6 +5,21 @@
 	color:white;
 }
 
+#a{
+	color:red;
+}
+
+img{
+	float:right;
+	height:20rem;
+	width:40%;
+	opacity:.7;
+}
+
+.container{
+	z-index:2;
+}
+
 #body{
 	background-color:black;
 }
