@@ -14,7 +14,7 @@
 <body id="body">
 	<h3>Successful Registration! Please return to Home Page.</h3>
 		<nav>
-			Return to --><a href="/">Home Page</a>
+			Return to --><a class="text-danger" id="a" href="/">Home Page</a>
 		</nav>
 </body>
 </html>
