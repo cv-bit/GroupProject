@@ -20,7 +20,7 @@
 		<h1>Welcome to Cars dot Com</h1>
 		<hr>
 		Welcome ${user.firstName}
-		<a href="/cars/add" class="btn btn-danger">Add New Car</a> <a href="/accessory/new" class="btn btn-danger">Add New Accessory</a>
+		<a href="/cars/add" class="btn btn-primary">Add New Car</a> <a href="/accessory/new" class="btn btn-danger">Add New Accessory</a>
 		<hr>
 		<h3>Showing All Cars</h3>
 		<table class="table table-dark">
